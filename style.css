@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  --black: hls(240, 6%, 13%);  /*são variáveis que criei para não ter que ficar repetindo em todo lugar que eu colocasse igual*/
+  --gray: hsl(240, 9%, 89%);
+
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;  /*webkit, significa que a propriedade que virá na frente dele (font-smoothing) só vai funcionar nos navegadores que são webkit (chrome, safari, etc), pois provavelmente essa informação font-smoothing não tem em todos navegadores. E ela faz a fonte ficar mais suave e bonitinha*/
+}
+
+body {
+  display: grid;  /*trabalha tanto no eixo vertical quanto no horizontal para posicionar os elementos. É bom para posicionar os layouts de um site (header, menu, main, image, banner, etc) de diferentes formas seja p mobile, tablet ou desktop*/
+  place-items: center;  /*colocamos alinhado ao centro*/
+}
+
+main {
+  background: url(images/Background.svg);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;  /*só serve para ser usado para textos ou elemento que recebem propriedades de texto*/
+
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem;  /*Só pegar o valor width em pixels da imagem escolhida e dividir por 16px (que é o tamaho padrão da fonte da página) e você terá o valor em rem*/
+  margin: 11.5rem auto 0;  
+
+  position: relative; /*2º por isso, coloco relative aqui, para indicar que esse será o limite para a outra imagem que subi um nivel no plano*/
+}
+
+.avatar span {
+  position: absolute;  /*1º coloco absolute para que a imagem em span fique em um nível acima da outra. Mas como o absolute funciona para a página inteira, preciso indicar qual na verdade vai ser a referência dele. No caso, a classe avatar, que pega a imagem debaixo (do primeiro nível), será o limite para essa imagem de cima*/
+  top: -15px;
+  z-index: 1; /*4º usamos o z-index para voltarmos ao nível passado. O eixo Z é o eixo de profundidade (imagem mais acima ou mais abaixo de nível)*/
+}
+
+.avatar > img {   /*.avatar img - Vai pegar TODAS as imagens dentro da classe avatar. .avatar > img - Vai pegar só a imagem do primeiro nível*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*object-fit serve para a imagem voltar para sua proporção correta de acordo com a altura e largura passadas anteriormente. E cover - para a imagem cobrir todo espaço definido*/
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /* 3º clip-path serve para criar uma forma geométrica. Usei o site https://bennettfeely.com/clippy/ para ajustar minha forma geométrica e copiar os valores dela para cá. Quando usa-se o clip-path e a imagem muda seu formato, as posições de níveis podem ser alteradas, por isso (passo 4º)*/
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none; /*para retirar as bolinhas da lista*/
+  padding: 0;
+
+  display: flex; /*para que os elementos fiquem um ao lado do outro*/
+  gap: 0.5rem; /*para inserir espaço entre os elementos que ficaram lado a lado no passo anterior. Liberado por cauda do display FLEX (com grid tb dá)*/
+
+  justify-content: center;  /*propriedade liberada ao usar o FLEX em display (com grid tb dá). Para alinhar os elementos no eixo X ao centro do eixo X*/
+}
