@@ -77,7 +77,7 @@ p {
 }
 
 ul {
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   list-style: none; /*para retirar as bolinhas da lista*/
   padding: 0;
@@ -86,4 +86,21 @@ ul {
   gap: 0.5rem; /*para inserir espaço entre os elementos que ficaram lado a lado no passo anterior. Liberado por cauda do display FLEX (com grid tb dá)*/
 
   justify-content: center;  /*propriedade liberada ao usar o FLEX em display (com grid tb dá). Para alinhar os elementos no eixo X ao centro do eixo X*/
+}
+
+#emailContent {
+  margin-top: 3rem;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  background-color: rgb(248, 49, 79);
+
+  text-shadow: rgb(24, 23, 23) 0 -1px;
+  text-transform: uppercase;
+
+  gap: 0;
+}
+
+#emailContent:hover {
+  background-color: rgb(252, 79, 36);
+  text-shadow: none;
 }

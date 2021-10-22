@@ -1,8 +1,9 @@
 const linksSocialMedia = {     // criação de um objeto com várias variáveis dentro. Vai ser uma forma de trocar os valores do HTML sem mexer diretamente no HTML
-  github: "Josana-Kla",
+  github: "josana-kla",
   youtube: "UC0IiEmhBauNKopdNGRGmiXg",
   instagram: "jambt",
   facebook: "josana.klagenberg",
+  linkedin: "in/" + "josana-klagenberg",
   twitter: "Jambt_K"
 }
 
