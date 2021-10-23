@@ -6,8 +6,9 @@ html, body {
   --black: hls(240, 6%, 13%);  /*são variáveis que criei para não ter que ficar repetindo em todo lugar que eu colocasse igual*/
   --gray: hsl(240, 9%, 89%);
 
-
+  width: 100%;
   height: 100%;
+
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;  /*webkit, significa que a propriedade que virá na frente dele (font-smoothing) só vai funcionar nos navegadores que são webkit (chrome, safari, etc), pois provavelmente essa informação font-smoothing não tem em todos navegadores. E ela faz a fonte ficar mais suave e bonitinha*/
 }
@@ -15,26 +16,43 @@ html, body {
 body {
   display: grid;  /*trabalha tanto no eixo vertical quanto no horizontal para posicionar os elementos. É bom para posicionar os layouts de um site (header, menu, main, image, banner, etc) de diferentes formas seja p mobile, tablet ou desktop*/
   place-items: center;  /*colocamos alinhado ao centro*/
+  
+  background: #121214 url(/images/BackgroundDesktop.png) no-repeat center/cover;
+  /*width: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;*/
 }
 
 main {
-  background: url(images/Background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(images/Background.svg) no-repeat center/cover;
+  width: 478px;
+  height: 820px;
+  
+  margin: auto;
+
+  border: 2px solid rgb(240, 24, 89); 
+  border-radius: 0.3rem;
+  box-shadow: inset 0 0 0.7em rgb(252, 214, 4), 0 0 1.5em rgb(253, 6, 6);
 }
 
 .container {
-  max-width: 250px;
+  display: grid;
+  place-content: center;
+  
   margin-left: auto;
   margin-right: auto;
-  text-align: center;  /*só serve para ser usado para textos ou elemento que recebem propriedades de texto*/
 
+  max-width: 250px;
+  
+  text-align: center;  /*só serve para ser usado para textos ou elemento que recebem propriedades de texto*/
+  
   color: var(--gray);
 }
 
 .avatar {
   width: 10rem;  /*Só pegar o valor width em pixels da imagem escolhida e dividir por 16px (que é o tamaho padrão da fonte da página) e você terá o valor em rem*/
-  margin: 11.5rem auto 0;  
+  margin: 10rem auto 1rem;  
 
   position: relative; /*2º por isso, coloco relative aqui, para indicar que esse será o limite para a outra imagem que subi um nivel no plano*/
 }
@@ -86,6 +104,10 @@ ul {
   gap: 0.5rem; /*para inserir espaço entre os elementos que ficaram lado a lado no passo anterior. Liberado por cauda do display FLEX (com grid tb dá)*/
 
   justify-content: center;  /*propriedade liberada ao usar o FLEX em display (com grid tb dá). Para alinhar os elementos no eixo X ao centro do eixo X*/
+}
+
+li img {
+  border-radius: 0.5rem;
 }
 
 #emailContent {

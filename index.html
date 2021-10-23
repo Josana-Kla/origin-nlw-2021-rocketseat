@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Josana Klagenberg - DoWhile 2021</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <!--responsividade-->
+    <link rel="stylesheet" href="responsive.css" />
 
     <!--utilizei fonte do site fonts.google.com e copiei os links das fontes escolhidas-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
     <main>
-
+      
+      <div id="band"></div>
       <div class="container">
+        
+        <div id="bandFixation"></div>
         <div class="avatar">
           <span>
-            <img src="images/Selo.svg" alt="Selo Build The Future"> <!--Essa imagem está no segundo nível-->
+            <img src="images/Selo.svg" alt="Selo Build The Future" />
+            <!--Essa imagem está no segundo nível-->
           </span>
-          <img src="https://lorempixel.com/185/185/people/" alt="Personal Photo" id="userImage"> <!--Essa imagem está no primeiro nível. O id aqui não pode ser no início se não a imagem não carrega-->
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Personal Photo"
+            id="userImage"
+          />
+          <!--Essa imagem está   no primeiro nível. O id aqui não pode ser no início se não a imagem não carrega-->
         </div>
 
-        <h1 id="userName">Josana Klagenberg</h1>  <!--Toda tag a aqui criou um quadradinho onde tem a imagem dentro. Esse quadradinho, no css, está com a cor cinza-->
-        <a id="userGithub" href="https://github.com/Josana-Kla/" target="_blank">
-          <img src="images/GitHub.svg" alt="GitHub Icon">
-          <span id="userLogin">Josana-Kla</span></a>  <!--span é uma forma de texto que não é um parágrafo, fica na mesma linha que ele está-->
+        <h1 id="userName">Josana Klagenberg</h1>
+        <!--Toda tag a aqui criou um quadradinho onde tem a imagem dentro.  Esse quadradinho, no css, está com a cor cinza-->
+        <a
+          id="userGithub"
+          href="https://github.com/Josana-Kla/"
+          target="_blank"
+        >
+          <img src="images/GitHub.svg" alt="GitHub Icon" />
+          <span id="userLogin">Josana-Kla</span></a
+        >
+        <!--span é uma forma de texto que não é um parágrafo, fica na mesma linha que ele está-->
 
         <p id="userBio">
           An instructor focused on helping people start programming for web
@@ -34,40 +57,51 @@
 
         <ul id="socialLinks">
           <li class="youtube">
-            <a href="https://www.youtube.com/channel/UC0IiEmhBauNKopdNGRGmiXg" target="_blank">
-              <img src="images/Youtube.svg" alt="YouTube Icon">
+            <a
+              href="https://www.youtube.com/channel/UC0IiEmhBauNKopdNGRGmiXg"
+              target="_blank"
+            >
+              <img src="images/Youtube.svg" alt="YouTube Icon" />
             </a>
           </li>
           <li class="instagram">
             <a href="https://www.instagram.com/jambt/" target="_blank">
-              <img src="images/Instagram.svg" alt="Instagram Icon">
+              <img src="images/Instagram.svg" alt="Instagram Icon" />
             </a>
           </li>
           <li class="facebook">
-            <a href="https://www.facebook.com/josana.klagenberg/" target="_blank">
-              <img src="images/Facebook.svg" alt="Facebook Icon">
+            <a
+              href="https://www.facebook.com/josana.klagenberg/"
+              target="_blank"
+            >
+              <img src="images/Facebook.svg" alt="Facebook Icon" />
             </a>
           </li>
           <li class="linkedin">
-            <a href="https://www.linkedin.com/in/josana-klagenberg/" target="_blank">
-              <img src="images/Linkedin.svg" alt="Linkedin Icon">
+            <a
+              href="https://www.linkedin.com/in/josana-klagenberg/"
+              target="_blank"
+            >
+              <img src="images/Linkedin.svg" alt="Linkedin Icon" />
             </a>
           </li>
           <li class="twitter">
             <a href="https://twitter.com/Jambt_K" target="_blank">
-              <img src="images/Twitter.svg" alt="Twitter Icon">
+              <img src="images/Twitter.svg" alt="Twitter Icon" />
             </a>
           </li>
         </ul>
         <div>
-            <a id="emailContent" href="mailto:josana.0205@gmail.com?Subject=Contato%20DoWhile">
+          <a
+            id="emailContent"
+            href="mailto:josana.0205@gmail.com?Subject=Contato%20DoWhile"
+          >
             Clique aqui e entre em contato comigo por e-mail
-            </a>
+          </a>
         </div>
       </div>
     </main>
 
     <script src="main.js"></script>
-
   </body>
 </html>
