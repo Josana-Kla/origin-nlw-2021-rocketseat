@@ -1,5 +1,5 @@
 # DESAFIO
-## Trilha Origin da NLW: Heat 2021 - Rocketseat rigin-nlw-2021-rocketseat
+## Trilha Origin da NLW: Heat 2021 - Rocketseat
 
 No evento da NLW: Heat 2021 - Rocketseat escolhi o desafio da trilha Origin para fazer. O desafio consistiu na criação de um crachá virtual para usarmos no DoWhile 2021.
 
